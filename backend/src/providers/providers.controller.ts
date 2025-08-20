@@ -1,7 +1,9 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse, ApiParam, ApiQuery } from '@nestjs/swagger';
 import { DecardService } from './decard/decard.service';
 import { UsersService } from '../users/users.service';
 
+@ApiTags('providers')
 @Controller('providers')
 export class ProvidersController {
     constructor(
@@ -10,6 +12,25 @@ export class ProvidersController {
     ) {}
 
     @Get('decard/methods/:currency')
+    @ApiOperation({ 
+        summary: 'Получить доступные методы платежа DeCard',
+        description: 'Возвращает список доступных методов платежа для указанной валюты'
+    })
+    @ApiParam({ name: 'currency', description: 'Код валюты', example: 'TRY' })
+    @ApiResponse({ 
+        status: 200, 
+        description: 'Список методов платежа',
+        schema: {
+            type: 'array',
+            items: {
+                type: 'object',
+                properties: {
+                    name: { type: 'string', example: 'card' },
+                    enabled: { type: 'boolean', example: true }
+                }
+            }
+        }
+    })
     async getDecardMethods(@Param('currency') currency: string) {
         try {
             const methods = await this.decardService.getAvailableMethods(currency);
