@@ -47,8 +47,8 @@
                                        │                  │ Port: 9092          │
                                        │                  └─────────────────────┘
                                        │                             │
-                                Updates │                             │ Consumes
-                                Balance │                             │ Events
+                               Updates │                             │ Consumes
+                               Balance │                             │ Events
                                        │                             ▼
                                        │                  ┌─────────────────────┐
                                        └──────────────────│   Event Worker      │
