@@ -1,0 +1,22 @@
+# 🔧 Backend API Service Environment Variables
+# Скопируйте в backend/.env и добавьте секретные ключи
+
+# 🔐 DeCard API Credentials (СЕКРЕТНО!)
+DECARD_SHOP_KEY=your_actual_shop_key
+DECARD_SHOP_SECRET=your_actual_shop_secret
+DECARD_API_URL=https://decard.me
+
+# 💾 Database
+DATABASE_URL=postgresql://user:password@db:5432/gatedb
+
+# 📨 Kafka
+KAFKA_BROKER=kafka:9092
+
+# 🔗 URLs
+DECARD_WEBHOOK_URL=http://webhook-worker:3001/webhook/decard
+PAYMENT_SUCCESS_URL=http://localhost/payment/success
+PAYMENT_FAIL_URL=http://localhost/payment/fail
+
+# ⚙️ Settings
+NODE_ENV=development
+PORT=3000

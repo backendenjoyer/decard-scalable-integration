@@ -1,0 +1,11 @@
+# ⚡ Event Processing Worker Environment Variables
+# Скопируйте в event-worker/.env
+
+# 💾 Database
+DATABASE_URL=postgresql://user:password@db:5432/gatedb
+
+# 📨 Kafka
+KAFKA_BROKER=kafka:9092
+
+# ⚙️ Settings
+NODE_ENV=development

@@ -1,0 +1,47 @@
+# Environment variables (содержат секретные данные)
+.env
+.env.local
+.env.production
+.env.development
+
+# Service-specific environment files
+backend/.env
+webhook-worker/.env
+event-worker/.env
+frontend/.env
+
+# Node modules
+node_modules/
+*/node_modules/
+
+# Build outputs
+dist/
+build/
+*/dist/
+*/build/
+
+# Logs
+*.log
+logs/
+*/logs/
+
+# Database
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/
+
+# Coverage reports
+coverage/
+*/coverage/

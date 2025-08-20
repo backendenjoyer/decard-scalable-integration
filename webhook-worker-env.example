@@ -1,0 +1,13 @@
+# 🔗 Webhook Worker Service Environment Variables
+# Скопируйте в webhook-worker/.env
+
+# 🔐 DeCard API (КРИТИЧЕСКИ ВАЖНО для валидации webhook'ов!)
+DECARD_SHOP_SECRET=your_actual_shop_secret
+DECARD_API_URL=https://decard.me
+
+# 📨 Kafka
+KAFKA_BROKER=kafka:9092
+
+# ⚙️ Settings
+NODE_ENV=development
+PORT=3001
